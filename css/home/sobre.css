@@ -1,0 +1,36 @@
+.sobre {
+  margin-top: 3rem;
+}
+
+.sobre-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  gap: 9rem;
+  align-items: center;
+}
+
+.sobre-container img {
+  margin-top: 1rem;
+  max-width: 400px;
+}
+
+.sobre-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sobre-texto .texto-grande {
+  max-width: 45ch;
+}
+
+@media (max-width: 1130px) {
+  .sobre-container img {
+    display: none;
+  }
+
+  .sobre-texto .texto-grande {
+    max-width: max-content;
+  }
+}

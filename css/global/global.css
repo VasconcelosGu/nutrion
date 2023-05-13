@@ -13,6 +13,7 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
   font-family: "Montserrat";
+  background-color: var(--bg);
 }
 
 img {
@@ -43,12 +44,52 @@ button {
 }
 
 .botao-branco {
-  color: var(--g300);
+  color: var(--g500);
   background-color: var(--w);
   border-radius: 1rem;
   transition: all ease-in-out 0.15s;
 }
 
+.botao-verde {
+  color: var(--w);
+  background-color: var(--g300);
+  border-radius: 0.5rem;
+  transition: all ease-in-out 0.15s;
+}
+
+.botao-verde:hover {
+  background-color: var(--g500);
+}
+
 .botao-branco:hover {
   transform: scale(1.1);
+}
+
+.titulo {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--g300);
+}
+
+.titulo span {
+  color: var(--o300);
+}
+
+@media (max-width: 1200px) {
+  .sobre-container,
+  .calculos-container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 3rem;
+  }
+  .texto-grande {
+    font-size: 1rem;
+  }
+  .botao {
+    font-size: 1rem;
+  }
 }
