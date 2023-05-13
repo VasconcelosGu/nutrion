@@ -1,0 +1,19 @@
+.hero {
+  background: url(/img/hero.webp) no-repeat center;
+  background-size: cover;
+}
+
+.hero-container img {
+  max-width: 350px;
+}
+
+.hero-container {
+  margin: 0 auto;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}

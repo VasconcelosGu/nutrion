@@ -1,0 +1,38 @@
+.h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.texto-grande {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.texto {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.botao {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+i {
+  font-size: 25px;
+}

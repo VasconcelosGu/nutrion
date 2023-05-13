@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="description" content="Websted, o seu site do seu jeitinho!" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/js/font-awesome.js"></script>
+
+    <link rel="shortcut icon" href="/img/icon.png" type="icon.png" />
+
+    <link rel="stylesheet" href="/css/home/style.css" />
+
+    <title>NutriON | Página Inicial</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <a href="/"><img src="/img/logo_verde.png" alt="logo-nutrion" /></a>
+        <button class="toggle-menu"><i class="far fa-bars"></i></button>
+        <nav class="header-nav">
+          <ul class="header-menu">
+            <li><a href="/" class="texto w">Home</a></li>
+            <li><a href="/#sobre" class="texto w">Sobre</a></li>
+            <li><a href="/#calculos" class="texto w">Projetos </a></li>
+            <li>
+              <a href="/contato" class="texto w">Contato</a>
+            </li>
+          </ul>
+          <a href="/calculos" class="botao botao-branco">calcular</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-container">
+        <img src="/img/logo_branca.png" alt="" />
+        <h1 class="h3 w">a melhor plataforma para cálculos nutricionais!</h1>
+        <a class="botao botao-branco" href="/calculos">começar!</a>
+      </div>
+    </section>
+  </body>
 </html>
