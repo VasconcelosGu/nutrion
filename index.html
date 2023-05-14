@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta name="description" content="Websted, o seu site do seu jeitinho!" />
     <meta charset="UTF-8" />
@@ -30,12 +30,12 @@
           <ul class="header-menu">
             <li><a href="/" class="texto w">Home</a></li>
             <li><a href="/#sobre" class="texto w">Sobre</a></li>
-            <li><a href="/#calculos" class="texto w">Projetos </a></li>
+            <li><a href="/#calculos" class="texto w">Cálculos </a></li>
             <li>
               <a href="/contato" class="texto w">Contato</a>
             </li>
           </ul>
-          <a href="/calculos" class="botao botao-branco">calcular</a>
+          <a href="/selecao-calculo" class="botao botao-branco">calcular</a>
         </nav>
       </div>
     </header>
@@ -48,141 +48,143 @@
       </div>
     </section>
 
-    <section class="sobre" id="sobre">
-      <div class="sobre-container">
-        <div class="sobre-texto">
-          <h1 class="titulo">sobre<span>.</span></h1>
-          <p class="texto-grande g700">
-            O NutriON é uma plataforma online totalmente gratuita que tem como
-            objetivo fazer alguns cálculos nutricionais.
-          </p>
-          <p class="texto-grande g700">
-            A ideia da plataforma surgiu de uma percepção de uma dor que muitos
-            profissionais e interessados em nutrição têm, pois muitas vezes
-            precisam fazer certos cálculos manualmente ou pagam uma plataforma
-            para isso.
-          </p>
-          <p class="texto-grande g700">
-            O intuito dessa plataforma é que a comunidade possa também
-            contribuir para que seja cada vez mais completa, com vários tipos de
-            cálculo e tipos de alimento para o usuário consiga montar uma dieta
-            completa e variada!
-          </p>
+    <main>
+      <section class="sobre" id="sobre">
+        <div class="sobre-container">
+          <div class="sobre-texto">
+            <h1 class="titulo">sobre<span>.</span></h1>
+            <p class="texto-grande g700">
+              O NutriON é uma plataforma online totalmente gratuita que tem como
+              objetivo fazer alguns cálculos nutricionais.
+            </p>
+            <p class="texto-grande g700">
+              A ideia da plataforma surgiu de uma percepção de uma dor que
+              muitos profissionais e interessados em nutrição têm, pois muitas
+              vezes precisam fazer certos cálculos manualmente ou pagam uma
+              plataforma para isso.
+            </p>
+            <p class="texto-grande g700">
+              O intuito dessa plataforma é que a comunidade possa também
+              contribuir para que seja cada vez mais completa, com vários tipos
+              de cálculo e tipos de alimento para o usuário consiga montar uma
+              dieta completa e variada!
+            </p>
+          </div>
+          <img
+            src="/img/sobre.webp"
+            alt="imagem ilustrativa para a seção sobre"
+          />
         </div>
-        <img
-          src="/img/sobre.webp"
-          alt="imagem ilustrativa para a seção sobre"
-        />
-      </div>
-    </section>
+      </section>
 
-    <section class="calculos" id="calculos">
-      <div class="calculos-container">
-        <h1 class="titulo">cálculos<span>.</span></h1>
-        <div class="tipo-calculo">
-          <h2 class="h3 g500">Cálculo de calorias</h2>
-          <div class="tipo-calculo-texto">
-            <p class="texto-grande g700">
-              O cálculo de calorias de um alimento é feito com base em sua
-              composição nutricional, que inclui informações sobre os
-              macronutrientes (proteínas, carboidratos e gorduras) e os
-              micronutrientes (vitaminas e minerais) presentes no alimento.
-            </p>
-            <p class="texto-grande g700">
-              Existem diferentes métodos para calcular as calorias de um
-              alimento, mas um dos mais comuns é através da utilização de
-              tabelas nutricionais. Essas tabelas fornecem informações
-              detalhadas sobre a quantidade de nutrientes e calorias presentes
-              em uma determinada porção de alimento.
-            </p>
-            <p class="texto-grande g700">
-              O cálculo é feito da seguinte forma:
-            </p>
-            <div class="conteudo-centro">
+      <section class="calculos" id="calculos">
+        <div class="calculos-container">
+          <h1 class="titulo">cálculos<span>.</span></h1>
+          <div class="tipo-calculo">
+            <h2 class="h3 g500">Cálculo de calorias</h2>
+            <div class="tipo-calculo-texto">
               <p class="texto-grande g700">
-                alimento * quantidade (g) = calorias totais (Kcal)
+                O cálculo de calorias de um alimento é feito com base em sua
+                composição nutricional, que inclui informações sobre os
+                macronutrientes (proteínas, carboidratos e gorduras) e os
+                micronutrientes (vitaminas e minerais) presentes no alimento.
               </p>
-              <a class="botao botao-verde" href="#">fazer cálculo</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="tipo-calculo">
-          <h2 class="h3 g500">Cálculo de IMC</h2>
-          <div class="tipo-calculo-texto">
-            <p class="texto-grande g700">
-              O IMC é reconhecido como padrão internacional para avaliar o grau
-              de sobrepeso e obesidade. É calculado dividindo o peso (em kg)
-              pela altura ao quadrado (em metros).
-            </p>
-            <p class="texto-grande g700">
-              O cálculo é feito da seguinte forma:
-            </p>
-            <div class="conteudo-centro">
-              <p class="texto-grande g700">peso (kg) / altura² (m) = IMC</p>
-              <table class="tabela-imc">
-                <thead>
-                  <th class="th2 last">resultado</th>
-                  <th class="last">situação</th>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>Abaixo de 17</td>
-                    <td>Muito abaixo do peso</td>
-                  </tr>
-                  <tr>
-                    <td>Entre 17 e 18,49</td>
-                    <td>Abaixo do peso</td>
-                  </tr>
-                  <tr>
-                    <td>Entre 18,5 e 24,99</td>
-                    <td>Peso normal</td>
-                  </tr>
-                  <tr>
-                    <td>Entre 25 e 29,99</td>
-                    <td>Acima do peso</td>
-                  </tr>
-                  <tr>
-                    <td>Entre 30 e 34,99</td>
-                    <td>Obesidade I</td>
-                  </tr>
-                  <tr>
-                    <td>Entre 35 e 39,99</td>
-                    <td>Obesidade II (severa)</td>
-                  </tr>
-                  <tr>
-                    <td class="last">Acima de 40</td>
-                    <td class="last">Obesidade III (mórbida)</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a class="botao botao-verde" href="#">fazer cálculo</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="tipo-calculo">
-          <h2 class="h3 g500">Cálculo de litros de água</h2>
-          <div class="tipo-calculo-texto">
-            <p class="texto-grande g700">
-              Um cálculo recomendado pelos especialistas é ingerir 35ml de água
-              por cada quilo. Assim, a quantidade de água ingerida se aproxima
-              mais da sua necessidade individual.
-            </p>
-            <p class="texto-grande g700">
-              O cálculo é feito da seguinte forma:
-            </p>
-            <div class="conteudo-centro">
               <p class="texto-grande g700">
-                peso (kg) x 0,035 = quantidade (L)
+                Existem diferentes métodos para calcular as calorias de um
+                alimento, mas um dos mais comuns é através da utilização de
+                tabelas nutricionais. Essas tabelas fornecem informações
+                detalhadas sobre a quantidade de nutrientes e calorias presentes
+                em uma determinada porção de alimento.
               </p>
-              <a class="botao botao-verde" href="#">fazer cálculo</a>
+              <p class="texto-grande g700">
+                O cálculo é feito da seguinte forma:
+              </p>
+              <div class="conteudo-centro">
+                <p class="texto-grande g700">
+                  alimento * quantidade (g) = calorias totais (Kcal)
+                </p>
+                <a class="botao botao-verde" href="#">fazer cálculo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tipo-calculo">
+            <h2 class="h3 g500">Cálculo de IMC</h2>
+            <div class="tipo-calculo-texto">
+              <p class="texto-grande g700">
+                O IMC é reconhecido como padrão internacional para avaliar o
+                grau de sobrepeso e obesidade. É calculado dividindo o peso (em
+                kg) pela altura ao quadrado (em metros).
+              </p>
+              <p class="texto-grande g700">
+                O cálculo é feito da seguinte forma:
+              </p>
+              <div class="conteudo-centro">
+                <p class="texto-grande g700">peso (kg) / altura² (m) = IMC</p>
+                <table class="tabela-imc">
+                  <thead>
+                    <th class="th2 last">resultado</th>
+                    <th class="last">situação</th>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Abaixo de 17</td>
+                      <td>Muito abaixo do peso</td>
+                    </tr>
+                    <tr>
+                      <td>Entre 17 e 18,49</td>
+                      <td>Abaixo do peso</td>
+                    </tr>
+                    <tr>
+                      <td>Entre 18,5 e 24,99</td>
+                      <td>Peso normal</td>
+                    </tr>
+                    <tr>
+                      <td>Entre 25 e 29,99</td>
+                      <td>Acima do peso</td>
+                    </tr>
+                    <tr>
+                      <td>Entre 30 e 34,99</td>
+                      <td>Obesidade I</td>
+                    </tr>
+                    <tr>
+                      <td>Entre 35 e 39,99</td>
+                      <td>Obesidade II (severa)</td>
+                    </tr>
+                    <tr>
+                      <td class="last">Acima de 40</td>
+                      <td class="last">Obesidade III (mórbida)</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a class="botao botao-verde" href="#">fazer cálculo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tipo-calculo">
+            <h2 class="h3 g500">Cálculo de litros de água</h2>
+            <div class="tipo-calculo-texto">
+              <p class="texto-grande g700">
+                Um cálculo recomendado pelos especialistas é ingerir 35ml de
+                água por cada quilo. Assim, a quantidade de água ingerida se
+                aproxima mais da sua necessidade individual.
+              </p>
+              <p class="texto-grande g700">
+                O cálculo é feito da seguinte forma:
+              </p>
+              <div class="conteudo-centro">
+                <p class="texto-grande g700">
+                  peso (kg) x 0,035 = quantidade (L)
+                </p>
+                <a class="botao botao-verde" href="#">fazer cálculo</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="footer-container">
