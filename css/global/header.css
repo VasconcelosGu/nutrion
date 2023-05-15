@@ -1,7 +1,6 @@
 .header {
   background-color: var(--g300);
   box-shadow: var(--box-shadow);
-  /* position: fixed; */
   width: 100%;
   z-index: 999;
 }
@@ -52,7 +51,6 @@
 .header-menu a:hover::after {
   width: 100%;
 }
-
 
 .toggle-menu {
   display: none;
