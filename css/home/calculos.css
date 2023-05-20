@@ -8,6 +8,7 @@
 .calculos-container {
   margin: 0 auto;
   max-width: 1200px;
+  padding-top: 5rem;
 }
 .calculos-container .titulo {
   padding-top: 2rem;

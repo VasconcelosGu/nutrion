@@ -3,6 +3,7 @@
   box-shadow: var(--box-shadow);
   width: 100%;
   z-index: 999;
+  position: fixed;
 }
 
 .header img {
@@ -75,20 +76,15 @@
     transition: all 0.2s ease-in-out;
   }
 
-  .toggle-menu.active {
-    transform: rotate(180deg);
-  }
-
   .header nav {
     position: fixed;
     right: -100%;
-    top: 76px;
-    background: var(--b300);
+    top: 65px;
+    background: var(--g300);
     flex-direction: column;
     z-index: 99;
     gap: 2rem;
-    box-shadow: var(--box-shadow);
-    padding: 3rem 2rem;
+    padding: 3rem;
     border-radius: 0 0 0 0.5rem;
     transition: all 0.2s ease-in-out;
   }
