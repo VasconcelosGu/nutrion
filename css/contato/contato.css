@@ -1,3 +1,6 @@
+.contato {
+  flex: 1;
+}
 .contato-container {
   max-width: 1200px;
   margin: 0 auto;

@@ -1,8 +1,8 @@
 .selecao {
-  min-height: 83.9vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
 .selecao-container {

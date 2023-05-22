@@ -1,6 +1,5 @@
-section {
-  min-height: 88.5vh;
-  min-width: 100%;
+.calculo-agua {
+  flex: 1;
 }
 
 .calculo-agua-container {
