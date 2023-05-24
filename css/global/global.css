@@ -48,6 +48,24 @@ input {
   font-weight: 400;
 }
 
+dialog {
+  border: none;
+  border-radius: 0.5rem;
+  width: 1000px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  padding: 1rem 1rem 2rem 2rem;
+  margin: 0 auto;
+  margin-top: calc(10vh);
+}
+
+dialog[data-id="2"] {
+  margin-top: calc(20vh);
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+}
+
 .botao {
   display: block;
   width: fit-content;
@@ -77,6 +95,22 @@ input {
   transform: scale(1.1);
 }
 
+.buttonClose {
+  background-color: #e13131;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0;
+  transition: all ease-in-out 0.175s;
+}
+
+.buttonClose i {
+  font-size: 1.125rem;
+}
+
+.buttonClose:hover {
+  background-color: #a12424;
+}
+
 .titulo {
   font-size: 4rem;
   font-weight: 600;
@@ -93,6 +127,10 @@ input {
   .calculo-agua-container {
     padding: 0 1rem;
   }
+  dialog {
+    padding: 1rem;
+    margin-top: 3vh;
+  }
 }
 
 @media (max-width: 600px) {
@@ -104,5 +142,18 @@ input {
   }
   .botao {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  dialog[data-id="2"] {
+    margin-top: 10vh;
+  }
+
+  dialog .titulo {
+    font-size: 2rem;
+  }
+  h1.texto-grande {
+    text-align: center;
   }
 }

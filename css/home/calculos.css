@@ -10,7 +10,7 @@
   max-width: 1200px;
   padding-top: 5rem;
 }
-.calculos-container .titulo {
+.calculos-container > .titulo {
   padding-top: 2rem;
 }
 
@@ -35,7 +35,7 @@
   align-items: center;
 }
 
-.conteudo-centro .texto-grande {
+.conteudo-centro > .texto-grande {
   margin-bottom: 2rem;
 }
 
@@ -70,18 +70,18 @@
   border: none;
 }
 
-.tabela-imc:hover {
+/* .tabela-imc:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-}
+} */
 
 @media (max-width: 752px) {
-  .calculos-container .titulo {
+  .calculos-container > .titulo {
     font-size: 3rem;
   }
-  .tipo-calculo-texto .texto-grande {
+  .tipo-calculo-texto > .texto-grande {
     font-size: 1rem;
   }
-  .calculos-container .h3 {
+  .calculos-container > .h3 {
     font-size: 1.5rem;
     text-align: center;
   }
@@ -96,5 +96,8 @@
   }
   .tabela-imc td {
     font-size: 14px;
+  }
+  .calculo-container > .texto-grande {
+    margin-bottom: 0;
   }
 }
