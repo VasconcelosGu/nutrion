@@ -177,27 +177,50 @@
                       <h1 class="titulo">cálculo de IMC</h1>
                       <p class="texto-grande g700">
                         Digite o peso e a altura para descobrir qual é o IMC
+                        (utilize "." ao invés de ",")
                       </p>
-                      <div class="calculo">
+                      <form class="calculo" id="calculo-imc-form">
                         <div class="formula">
                           <div class="input-peso">
                             <h1 class="texto-grande g700">Peso(kg)</h1>
-                            <input class="texto-grande g700" type="text" />
+                            <input
+                              name="peso"
+                              class="texto-grande g700"
+                              type="text"
+                            />
                           </div>
                           <p class="texto-grande g700">/</p>
                           <div class="input-altura">
                             <h1 class="texto-grande g700">Altura(m)</h1>
-                            <input class="texto-grande g700" type="text" />
+                            <input
+                              name="altura"
+                              class="texto-grande g700"
+                              type="text"
+                            />
                           </div>
                           <p class="texto-grande g700">=</p>
                           <div class="imc-resultado">
                             <h1 class="texto-grande g700">IMC:</h1>
-                            <div class="calc-res">
-                              <p class="texto-grande">res</p>
+                            <div class="calc-res" id="calc-imc-res">
+                              <p class="texto-grande"></p>
                             </div>
                           </div>
                         </div>
-                        <button class="botao-verde botao">calcular</button>
+                        <div class="form-buttons">
+                          <button
+                            class="botao-vermelho botao btnResetCalcImc"
+                            type="reset"
+                          >
+                            limpar
+                          </button>
+
+                          <button
+                            class="botao-verde botao btnCalcIMC"
+                            type="submit"
+                          >
+                            calcular
+                          </button>
+                        </div>
                         <table class="tabela-imc">
                           <thead>
                             <th class="th2 last">resultado</th>
@@ -235,7 +258,7 @@
                             </tr>
                           </tbody>
                         </table>
-                      </div>
+                      </form>
                     </div>
                   </section>
                 </dialog>
@@ -272,24 +295,42 @@
                         Digite o peso para saber que quantidade de água
                         recomenda-se beber diariamente
                       </p>
-                      <div class="calculo">
+                      <form class="calculo" id="calculo-agua-form">
                         <div class="formula">
                           <div class="input-peso">
                             <h1 class="texto-grande g700">Peso(kg)</h1>
-                            <input class="texto-grande g700" type="text" />
+                            <input
+                              name="peso"
+                              class="texto-grande g700"
+                              type="text"
+                            />
                           </div>
                           <p class="texto-grande g700">x</p>
                           <p class="texto-grande g700">0,035</p>
                           <p class="texto-grande g700">=</p>
                           <div class="qtde-total-litros">
                             <h1 class="texto-grande g700">Quantidade (L)</h1>
-                            <div class="calc-res">
-                              <p class="texto-grande">res</p>
+                            <div class="calc-res" id="calc-agua-res">
+                              <p class="texto-grande"></p>
                             </div>
                           </div>
                         </div>
-                        <button class="botao-verde botao">calcular</button>
-                      </div>
+                        <div class="form-buttons">
+                          <button
+                            class="botao-vermelho botao btnResetCalcAgua"
+                            type="reset"
+                          >
+                            limpar
+                          </button>
+
+                          <button
+                            class="botao-verde botao btnCalcAgua"
+                            type="submit"
+                          >
+                            calcular
+                          </button>
+                        </div>
+                      </form>
                     </div>
                   </section>
                 </dialog>
@@ -340,5 +381,7 @@
     </footer>
     <script src="/js/menu.js"></script>
     <script src="/js/modal.js"></script>
+    <script src="/js/calculo-agua.js"></script>
+    <script src="/js/calculo-imc.js"></script>
   </body>
 </html>

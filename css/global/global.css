@@ -49,17 +49,16 @@ input {
 }
 
 dialog {
+  z-index: 9999999999;
   border: none;
   border-radius: 0.5rem;
   width: 1000px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   padding: 1rem 1rem 2rem 2rem;
   margin: 0 auto;
-  margin-top: calc(10vh);
-}
-
-dialog[data-id="2"] {
-  margin-top: calc(20vh);
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 dialog::backdrop {
@@ -71,24 +70,46 @@ dialog::backdrop {
   width: fit-content;
   padding: 0.75rem 2rem;
   border-radius: 2rem;
+  transition: all ease-in-out 0.15s;
 }
 
 .botao-branco {
   color: var(--g500);
   background-color: var(--w);
   border-radius: 1rem;
-  transition: all ease-in-out 0.15s;
 }
 
 .botao-verde {
   color: var(--w);
   background-color: var(--g300);
   border-radius: 0.5rem;
-  transition: all ease-in-out 0.15s;
 }
 
 .botao-verde:hover {
   background-color: var(--g500);
+}
+
+.botao-amarelo {
+  color: #84860f;
+  background-color: var(--y300);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.botao-amarelo i {
+  font-size: 1.125rem;
+}
+
+.botao-amarelo:hover {
+  background-color: var(--y500);
+}
+
+.botao-vermelho {
+  color: var(--w);
+  background-color: var(--r300);
+  border-radius: 0.5rem;
 }
 
 .botao-branco:hover {
@@ -96,7 +117,7 @@ dialog::backdrop {
 }
 
 .buttonClose {
-  background-color: #e13131;
+  background-color: var(--r300);
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
   margin-right: 0;
@@ -108,7 +129,7 @@ dialog::backdrop {
 }
 
 .buttonClose:hover {
-  background-color: #a12424;
+  background-color: var(--r500);
 }
 
 .titulo {
@@ -124,13 +145,26 @@ dialog::backdrop {
 @media (max-width: 1200px) {
   .sobre-container,
   .calculos-container,
-  .calculo-agua-container {
+  .calculo-agua-container,
+  .calculo-imc-container {
     padding: 0 1rem;
   }
+
+  .calculo-imc-container {
+    padding-top: 5rem;
+  }
+
   dialog {
     padding: 1rem;
     margin-top: 3vh;
   }
+}
+
+dialog .titulo {
+  font-size: 3rem;
+}
+dialog .texto-grande {
+  font-size: 1.125rem;
 }
 
 @media (max-width: 600px) {
@@ -146,10 +180,6 @@ dialog::backdrop {
 }
 
 @media (max-width: 480px) {
-  dialog[data-id="2"] {
-    margin-top: 10vh;
-  }
-
   dialog .titulo {
     font-size: 2rem;
   }

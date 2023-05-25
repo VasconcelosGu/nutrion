@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta name="description" content="Websted, o seu site do seu jeitinho!" />
@@ -17,9 +16,9 @@
 
     <link rel="shortcut icon" href="/img/icon.png" type="icon.png" />
 
-    <link rel="stylesheet" href="/css/selecao/style.css" />
+    <link rel="stylesheet" href="/css/calc_imc/style.css" />
 
-    <title>NutriON | Selecionar Cálculo</title>
+    <title>NutriON | Cálculo Litro de Água</title>
   </head>
   <body>
     <header class="header">
@@ -41,54 +40,82 @@
         </nav>
       </div>
     </header>
-    <section class="selecao">
-      <div class="selecao-container">
-        <h1 class="titulo">selecione o tipo de cálculo</h1>
-        <div class="calculos-cards">
-          <ul>
-            <li>
-              <div class="calculo-card">
-                <h1 class="h3 g300">Cálculo de calorias</h1>
-                <p class="texto g700">
-                  Aqui você pode consultar quantas calorias tem a refeição que
-                  você montar
-                </p>
 
-                <a class="botao botao-verde" href="#">acessar</a>
+    <section class="calculo-imc">
+      <div class="calculo-imc-container">
+        <h1 class="titulo">cálculo de IMC</h1>
+        <p class="texto-grande g700">
+          Digite o peso e a altura para descobrir qual é o IMC (utilize "." ao invés de ",")
+        </p>
+        <form class="calculo-imc" id="calculo-imc-form">
+          <div class="formula-imc">
+            <div class="input-peso">
+              <h1 class="texto-grande g700">Peso(kg)</h1>
+              <input name="peso" class="texto-grande g700" type="text" />
+            </div>
+            <p class="texto-grande g700">/</p>
+            <div class="input-altura">
+              <h1 class="texto-grande g700">Altura(m)</h1>
+              <input name="altura" class="texto-grande g700" type="text" />
+            </div>
+            <p class="texto-grande g700">=</p>
+            <div class="imc-resultado">
+              <h1 class="texto-grande g700">IMC:</h1>
+              <div class="calc-imc-res" id="calc-imc-res">
+                <p class="texto-grande"></p>
               </div>
-            </li>
+            </div>
+          </div>
+          <div class="form-buttons">
+            <button class="botao-vermelho botao btnResetCalcImc" type="reset">
+              limpar
+            </button>
 
-            <li>
-              <div class="calculo-card">
-                <h1 class="h3 g300">Cálculo de IMC</h1>
-                <p class="texto g700">
-                  Aqui você pode calcular o IMC de alguém baseado no peso e
-                  altura de uma pessoa
-                </p>
+            <button class="botao-verde botao btnCalcIMC" type="submit">
+              calcular
+            </button>
+          </div>
+          <table class="tabela-imc">
+            <thead>
+              <th class="th2 last">resultado</th>
+              <th class="last">situação</th>
+            </thead>
 
-                <a class="botao botao-verde" href="/paginas/calc_imc.html"
-                  >acessar</a
-                >
-              </div>
-            </li>
-
-            <li>
-              <div class="calculo-card">
-                <h1 class="h3 g300">Cálculo de litros<br />de água</h1>
-                <p class="texto g700">
-                  Aqui você pode calcular quantos litros de água recomenda-se
-                  beber diariamente baseada no peso
-                </p>
-
-                <a class="botao botao-verde" href="/paginas/calc_agua.html"
-                  >acessar</a
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
+            <tbody>
+              <tr>
+                <td>Abaixo de 17</td>
+                <td>Muito abaixo do peso</td>
+              </tr>
+              <tr>
+                <td>Entre 17 e 18,49</td>
+                <td>Abaixo do peso</td>
+              </tr>
+              <tr>
+                <td>Entre 18,5 e 24,99</td>
+                <td>Peso normal</td>
+              </tr>
+              <tr>
+                <td>Entre 25 e 29,99</td>
+                <td>Acima do peso</td>
+              </tr>
+              <tr>
+                <td>Entre 30 e 34,99</td>
+                <td>Obesidade I</td>
+              </tr>
+              <tr>
+                <td>Entre 35 e 39,99</td>
+                <td>Obesidade II (severa)</td>
+              </tr>
+              <tr>
+                <td class="last">Acima de 40</td>
+                <td class="last">Obesidade III (mórbida)</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
       </div>
     </section>
+
     <footer class="footer">
       <div class="footer-container">
         <p class="copyright w">© Todos os direitos reservados</p>
@@ -128,5 +155,7 @@
       </div>
     </footer>
     <script src="/js/menu.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/calculo-imc.js"></script>
   </body>
 </html>

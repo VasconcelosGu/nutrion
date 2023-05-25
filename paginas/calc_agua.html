@@ -48,24 +48,32 @@
           Digite o peso para saber que quantidade de água recomenda-se beber
           diariamente
         </p>
-        <div class="agua-calculo">
+        <form class="calculo" id="calculo-agua-form">
           <div class="formula-agua">
             <div class="input-peso">
               <h1 class="texto-grande g700">Peso(kg)</h1>
-              <input class="texto-grande g700" type="text" />
+              <input name="peso" class="texto-grande g700" type="text" />
             </div>
             <p class="texto-grande g700">x</p>
             <p class="texto-grande g700">0,035</p>
             <p class="texto-grande g700">=</p>
             <div class="qtde-total-litros">
               <h1 class="texto-grande g700">Quantidade (L)</h1>
-              <div class="calc-agua-res">
-                <p class="texto-grande">res</p>
+              <div class="calc-agua-res" id="calc-agua-res">
+                <p class="texto-grande"></p>
               </div>
             </div>
           </div>
-          <button class="botao-verde botao buttonOpen">calcular</button>
-        </div>
+          <div class="form-buttons">
+            <button class="botao-vermelho botao btnResetCalcAgua" type="reset">
+              limpar
+            </button>
+
+            <button class="botao-verde botao btnCalcAgua" type="submit">
+              calcular
+            </button>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -109,5 +117,6 @@
     </footer>
     <script src="/js/menu.js"></script>
     <script src="/js/modal.js"></script>
+    <script src="/js/calculo-agua.js"></script>
   </body>
 </html>
