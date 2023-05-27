@@ -1,0 +1,90 @@
+.selecao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.selecao-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-bottom: 4rem;
+  padding-top: 5rem;
+}
+
+.titulo {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.calculos-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.calculos-cards ul {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.calculo-card {
+  width: 436.3px;
+  height: 292px;
+  padding: 1.5rem;
+  background-color: var(--w);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  transition: all 0.175s ease-in-out;
+}
+
+.calculo-card p {
+  text-align: center;
+}
+
+.calculo-card .h3 {
+  text-align: center;
+}
+
+.calculo-card .botao {
+  margin: 0 auto;
+}
+
+.calculo-card:hover {
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1370px) {
+  .calculos-cards ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 905px) {
+  .calculos-cards ul {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .calculo-card .h3 {
+    font-size: 1.5rem;
+  }
+  .calculo-card p {
+    font-size: 1rem;
+  }
+
+  .calculo-card {
+    width: 430px;
+    height: 280px;
+  }
+}

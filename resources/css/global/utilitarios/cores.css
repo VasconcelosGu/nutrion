@@ -1,0 +1,51 @@
+:root {
+  --w: #ffffff;
+  --g300: #33c71b;
+  --g500: #107500;
+  --g700: #020e00;
+  --o300: #ff9900;
+  --bg: #fafafa;
+  --y300: #e7eb23;
+  --y500: #c1c512;
+  --r300: #e13131;
+  --r500: #be1919;
+}
+
+.w {
+  color: var(--w);
+}
+
+.g300 {
+  color: var(--g300);
+}
+
+.g500 {
+  color: var(--g500);
+}
+
+.g700 {
+  color: var(--g700);
+}
+.y300 {
+  color: var(--y300);
+}
+
+.y500 {
+  color: var(--y500);
+}
+
+.r300 {
+  color: var(--r300);
+}
+
+.r500 {
+  color: var(--r500);
+}
+
+.o300 {
+  color: var(--o300);
+}
+
+.bg {
+  color: var(--bg);
+}

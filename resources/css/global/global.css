@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: "Montserrat";
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  border: none;
+  margin: 0 auto;
+}
+
+input {
+  background: #ffffff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+dialog {
+  z-index: 9999999999;
+  border: none;
+  border-radius: 0.5rem;
+  width: 1000px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  padding: 1rem 1rem 2rem 2rem;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+}
+
+.botao {
+  display: block;
+  width: fit-content;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  transition: all ease-in-out 0.15s;
+}
+
+.botao-branco {
+  color: var(--g500);
+  background-color: var(--w);
+  border-radius: 1rem;
+}
+
+.botao-verde {
+  color: var(--w);
+  background-color: var(--g300);
+  border-radius: 0.5rem;
+}
+
+.botao-verde:hover {
+  background-color: var(--g500);
+}
+
+.botao-amarelo {
+  color: #84860f;
+  background-color: var(--y300);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.botao-amarelo i {
+  font-size: 1.125rem;
+}
+
+.botao-amarelo:hover {
+  background-color: var(--y500);
+}
+
+.botao-vermelho {
+  color: var(--w);
+  background-color: var(--r300);
+  border-radius: 0.5rem;
+}
+
+.botao-branco:hover {
+  transform: scale(1.1);
+}
+
+.buttonClose {
+  background-color: var(--r300);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0;
+  transition: all ease-in-out 0.175s;
+}
+
+.buttonClose i {
+  font-size: 1.125rem;
+}
+
+.buttonClose:hover {
+  background-color: var(--r500);
+}
+
+.titulo {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--g300);
+}
+
+.titulo span {
+  color: var(--o300);
+}
+
+@media (max-width: 1200px) {
+  .sobre-container,
+  .calculos-container,
+  .calculo-agua-container,
+  .calculo-imc-container {
+    padding: 0 1rem;
+  }
+
+  .calculo-imc-container {
+    padding-top: 5rem;
+  }
+
+  dialog {
+    padding: 1rem;
+    margin-top: 3vh;
+  }
+}
+
+dialog .titulo {
+  font-size: 3rem;
+}
+dialog .texto-grande {
+  font-size: 1.125rem;
+}
+
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 3rem;
+  }
+  .texto-grande {
+    font-size: 1rem;
+  }
+  .botao {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  dialog .titulo {
+    font-size: 2rem;
+  }
+  h1.texto-grande {
+    text-align: center;
+  }
+}
