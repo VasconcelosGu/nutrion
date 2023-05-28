@@ -13,11 +13,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('home');
+})->name("home");
+
 Route::get('/contato', function () {
     return view('contato');
 
 })->name("contato");
 
-Route::get('/', function () {
-    return view('home');
-})->name("home");
+Route::get('/selecao-calculo', function () {
+    return view('selecao-calculo');
+
+})->name("selecao-calculo");
+
+Route::get('/calculo-imc', function () {
+    return view('calculo-imc');
+
+})->name("calculo-imc");
+
+Route::get('/calculo-agua', function () {
+    return view('calculo-agua');
+
+})->name("calculo-agua");
+
+Route::get('/calculo-calorias', function () {
+    return view('calculo-calorias');
+
+})->name("calculo-calorias");

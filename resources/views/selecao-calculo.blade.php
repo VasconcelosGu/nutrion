@@ -13,34 +13,35 @@
       rel="stylesheet"
     />
 
-    <script src="/js/font-awesome.js"></script>
 
     <link rel="shortcut icon" href="/img/icon.png" type="icon.png" />
 
-    <link rel="stylesheet" href="/css/selecao/style.css" />
+    @vite(["resources/js/font-awesome.js",
+    "resources/css/selecao/style.css"])
 
     <title>NutriON | Selecionar Cálculo</title>
   </head>
   <body>
   <header class="header">
       <div class="header-container">
-        <a href="/"><img src="public/img/logo_verde.png" alt="logo-nutrion" /></a>
+        <a href="{{route('home')}}"><img src="./img/logo_verde.png" alt="logo-nutrion" /></a>
         <button class="toggle-menu"><i class="far fa-bars"></i></button>
         <nav class="header-nav">
           <ul class="header-menu">
-            <li><a href="index.php" class="texto w">Home</a></li>
-            <li><a href="index.php#sobre" class="texto w">Sobre</a></li>
-            <li><a href="index.php#calculos" class="texto w">Cálculos </a></li>
+            <li><a href="{{route('home')}}" class="texto w">Home</a></li>
+            <li><a href="{{route('home')}}#sobre" class="texto w">Sobre</a></li>
+            <li><a href="{{route('home')}}#calculos" class="texto w">Cálculos </a></li>
             <li>
-              <a href="resources/views/contato.blade.php" class="texto w">Contato</a>
+              <a href="{{route('contato')}}" class="texto w">Contato</a>
             </li>
           </ul>
-          <a href="resources/views/selecao-calculo.blade.php" class="botao botao-branco"
+          <a href="{{route('selecao-calculo')}}" class="botao botao-branco"
             >calcular</a
           >
         </nav>
       </div>
     </header>
+
     <section class="selecao">
       <div class="selecao-container">
         <h1 class="titulo">selecione o tipo de cálculo</h1>
@@ -54,7 +55,7 @@
                   você montar
                 </p>
 
-                <a class="botao botao-verde" href="resources/views/calc-calorias.blade.php">acessar</a>
+                <a class="botao botao-verde" href="{{route('calculo-calorias')}}">acessar</a>
               </div>
             </li>
 
@@ -66,7 +67,7 @@
                   altura de uma pessoa
                 </p>
 
-                <a class="botao botao-verde" href="resources/views/calc-imc.blade.php"
+                <a class="botao botao-verde" href="{{route('calculo-imc')}}"
                   >acessar</a
                 >
               </div>
@@ -80,7 +81,7 @@
                   beber diariamente baseada no peso
                 </p>
 
-                <a class="botao botao-verde" href="resources/views/calc-agua.blade.php"
+                <a class="botao botao-verde" href="{{route('calculo-agua')}}"
                   >acessar</a
                 >
               </div>
@@ -127,6 +128,8 @@
         >
       </div>
     </footer>
-    <script src="/js/menu.js"></script>
+
+    @vite(["resources/js/menu.js"])
+
   </body>
 </html>

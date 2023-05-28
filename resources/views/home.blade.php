@@ -28,18 +28,18 @@
   <body>
     <header class="header">
       <div class="header-container">
-        <a href="/"><img src="./img/logo_verde.png" alt="logo-nutrion" /></a>
+        <a href="{{route('home')}}"><img src="./img/logo_verde.png" alt="logo-nutrion" /></a>
         <button class="toggle-menu"><i class="far fa-bars"></i></button>
         <nav class="header-nav">
           <ul class="header-menu">
-            <li><a href="/" class="texto w">Home</a></li>
-            <li><a href="/#sobre" class="texto w">Sobre</a></li>
-            <li><a href="/#calculos" class="texto w">Cálculos </a></li>
+            <li><a href="{{route('home')}}" class="texto w">Home</a></li>
+            <li><a href="{{route('home')}}#sobre" class="texto w">Sobre</a></li>
+            <li><a href="{{route('home')}}#calculos" class="texto w">Cálculos </a></li>
             <li>
               <a href="{{route('contato')}}" class="texto w">Contato</a>
             </li>
           </ul>
-          <a href="resources/views/selecao-calculo.blade.php" class="botao botao-branco"
+          <a href="{{route('selecao-calculo')}}" class="botao botao-branco"
             >calcular</a
           >
         </nav>
@@ -50,7 +50,7 @@
       <div class="hero-container">
         <img src="./img/logo_branca.png" alt="" />
         <h1 class="h3 w">a melhor plataforma para cálculos nutricionais!</h1>
-        <a class="botao botao-branco" href="resources/views/selecao-calculo.blade.php"
+        <a class="botao botao-branco" href="{{route('selecao-calculo')}}"
           >começar!</a
         >
       </div>
@@ -111,7 +111,7 @@
                 <p class="texto-grande g700">
                   alimento * quantidade (g) = calorias totais (Kcal)
                 </p>
-                <a href="resources/views/calc-calorias.blade.php" class="botao botao-verde"> fazer cálculo </a>
+                <a href="{{route('calculo-calorias')}}" class="botao botao-verde"> fazer cálculo </a>
               </div>
             </div>
           </div>
