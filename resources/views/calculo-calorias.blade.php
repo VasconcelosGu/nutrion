@@ -37,6 +37,7 @@
     </div>
   </header>
 
+
   <section class="calculo-agua">
     <div class="calculo-agua-container">
       <h1 class="titulo">cálculo de litros de água</h1>
@@ -72,6 +73,17 @@
       </form>
     </div>
   </section>
+
+  <h1>testandoooo</h1>
+  <select name="" id="">
+    @foreach($products as $product)
+    <option value="">
+      <p>{{ $product->name }}</p>
+    </option>
+    @endforeach
+  </select>
+
+  <input type="text" name="" id="" autocomplete="">
 
   <footer class="footer">
     <div class="footer-container">
