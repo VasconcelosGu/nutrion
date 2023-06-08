@@ -12,8 +12,7 @@
 
   <link rel="shortcut icon" href="./img/icon.png" type="icon.png" />
 
-  @vite(["resources/js/font-awesome.js",
-  "resources/css/calc_agua/style.css"])
+  @vite(["resources/js/font-awesome.js","resources/css/calc_calorias/style.css"])
 
   <title>NutriON | Cálculo Litro de Água</title>
 </head>
@@ -38,28 +37,60 @@
   </header>
 
 
-  <section class="calculo-agua">
-    <div class="calculo-agua-container">
-      <h1 class="titulo">cálculo de litros de água</h1>
+  <section class="calculo-nutrientes">
+    <div class="calculo-nutrientes-container">
+      <h1 class="titulo">cálculo de calorias</h1>
       <p class="texto-grande g700">
-        Digite o peso para saber que quantidade de água recomenda-se beber
-        diariamente
+        Escolha o alimento que deseja e digite a quantidade para saber o valor energético do mesmo
       </p>
-      <form class="calculo" id="calculo-agua-form">
-        <div class="formula-agua">
-          <div class="input-peso">
-            <h1 class="texto-grande g700">Peso(kg)</h1>
-            <input name="peso" class="texto-grande g700" type="text" />
+      <form class="calculo" id="calculo-nutrientes-form">
+        <div class="formula-nutrientes">
+          <div class="input-produto">
+            <h1 class="texto-grande g700">Alimento:</h1>
+            <input list="produtos" class="texto-grande g700" id="produtos-input" name="produtos-input">
+            <datalist id="produtos">
+              @foreach($products as $product)
+              <option value="{{ $product->name }}"></option>
+              @endforeach
+            </datalist>
           </div>
           <p class="texto-grande g700">x</p>
-          <p class="texto-grande g700">0,035</p>
-          <p class="texto-grande g700">=</p>
-          <div class="qtde-total-litros">
-            <h1 class="texto-grande g700">Quantidade (L)</h1>
-            <div class="calc-agua-res" id="calc-agua-res">
-              <p class="texto-grande"></p>
-            </div>
+          <div class="input-quantidade">
+            <h1 class="texto-grande g700">Quantidade(g):</h1>
+            <input name="quantidade" class="texto-grande g700" type="text" />
           </div>
+          <p class="texto-grande g700">=</p>
+          <ul class="nutrientes-lista">
+            <li>
+              <div class="qtde-total-calorias">
+                <h1 class="texto-grande g700">Calorias(Kcal)</h1>
+                <div class="calc-calorias-res" id="calc-calorias-res">
+                  <p class="texto-grande"></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="qtde-total-calorias">
+                <h1 class="texto-grande g700">Carboidratos(g)</h1>
+                <div class="calc-calorias-res" id="calc-calorias-res">
+                  <p class="texto-grande"></p>
+                </div>
+            </li>
+            <li>
+              <div class="qtde-total-calorias">
+                <h1 class="texto-grande g700">Proteínas(g)</h1>
+                <div class="calc-calorias-res" id="calc-calorias-res">
+                  <p class="texto-grande"></p>
+                </div>
+            </li>
+            <li>
+              <div class="qtde-total-calorias">
+                <h1 class="texto-grande g700">Gorduras(g)</h1>
+                <div class="calc-calorias-res" id="calc-calorias-res">
+                  <p class="texto-grande"></p>
+                </div>
+            </li>
+          </ul>
         </div>
         <div class="form-buttons">
           <button class="botao-vermelho botao btnResetCalcAgua" type="reset">
@@ -74,16 +105,8 @@
     </div>
   </section>
 
-  <h1>testandoooo</h1>
-  <select name="" id="">
-    @foreach($products as $product)
-    <option value="">
-      <p>{{ $product->name }}</p>
-    </option>
-    @endforeach
-  </select>
 
-  <input type="text" name="" id="" autocomplete="">
+
 
   <footer class="footer">
     <div class="footer-container">
@@ -119,8 +142,9 @@
     </div>
   </footer>
 
+
   @vite(["resources/js/menu.js",
-  "resources/js/calculo-agua.js"])
+  "resources/js/calculo-agua.js", "resources/js/teste.js"])
 
 </body>
 

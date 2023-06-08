@@ -1,0 +1,95 @@
+.calculo-nutrientes {
+    flex: 1;
+}
+
+.calculo-nutrientes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+.calculo-nutrientes-container .titulo {
+    margin: 1rem auto;
+}
+
+.calculo-nutrientes-container > .texto-grande {
+    margin-bottom: 3rem;
+}
+
+.formula-nutrientes {
+    display: flex;
+    gap: 2rem;
+    align-items: end;
+    justify-content: center;
+}
+
+.calc-calorias-res {
+    background: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border: none;
+    padding: 0.5rem 2rem;
+    text-align: center;
+}
+
+.input-produto,
+.input-quantidade,
+.qtde-total-calorias {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-produto h1,
+.input-quantidade h1,
+.qtde-total-calorias h1 {
+    text-align: center;
+}
+
+#produtos-input {
+    width: 170px;
+}
+
+.input-quantidade {
+    max-width: 150px;
+}
+
+.qtde-total-calorias {
+    max-width: 173px;
+}
+
+#calc-calorias-res {
+    width: 135px;
+    height: 44px;
+}
+
+.nutrientes-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.nutrientes-lista h1,
+.formula-nutrientes h1 {
+    text-align: left;
+}
+
+.formula-nutrientes {
+    align-items: center;
+}
+
+.formula-nutrientes > p {
+    margin-top: 4rem;
+}
+
+.form-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.form-buttons button {
+    margin: 0;
+}
