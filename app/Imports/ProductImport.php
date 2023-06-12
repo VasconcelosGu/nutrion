@@ -14,11 +14,11 @@ class ProductImport implements ToCollection
     public function collection(Collection $rows)
     {
         foreach ($rows as $key => $row) {
-            if ($key === 0)
+            if ($key < 2)
                 continue;
 
             Product::create([
-                Product::nome => $row['0'],
+                Product::nome => trim(preg_replace("/\d/", '', $row['0'])),
             ]);
         }
     }
