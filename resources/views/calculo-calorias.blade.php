@@ -105,7 +105,11 @@
     </div>
   </section>
 
-
+  <form action="/importar" method="post" enctype="multipart/form-data">
+    @csrf <!-- Adicione isso se estiver usando o Laravel para proteção contra CSRF -->
+    <input type="file" name="produtos">
+    <button type="submit">Enviar</button>
+</form>
 
 
   <footer class="footer">

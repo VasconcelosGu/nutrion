@@ -41,3 +41,5 @@ Route::get('/calculo-agua', function () {
 // })->name("calculo-calorias");
 
 // Route::get('/calculo-calorias', [ProductController::class, 'calculo-calorias'])->name("calculo-calorias");
+
+Route::post('/importar', [ProductController::class, 'importarProdutos']);
