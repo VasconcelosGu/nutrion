@@ -2,17 +2,24 @@
     flex: 1;
 }
 
-.calculo-nutrientes-container {
+.calculo-nutrientes-container,
+.soma-nutrientes-container {
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 5rem;
 }
 
-.calculo-nutrientes-container .titulo {
+.calculo-nutrientes-container .titulo,
+.soma-nutrientes-container .titulo {
     margin: 1rem auto;
 }
 
-.calculo-nutrientes-container > .texto-grande {
+.soma-nutrientes-container .titulo.h2 {
+    font-size: 3rem;
+}
+
+.calculo-nutrientes-container > .texto-grande,
+.soma-nutrientes-container > .texto-grande {
     margin-bottom: 3rem;
 }
 
@@ -92,4 +99,25 @@
 
 .form-buttons button {
     margin: 0;
+    padding: 12px 24px;
+}
+
+.btnAddItem div {
+    width: 32px;
+    height: 32px;
+    background-color: var(--g300);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+}
+
+.btnAddItem {
+    background-color: transparent;
+}
+
+.btnAddItem i {
+    font-size: 1rem;
+    text-align: center;
 }

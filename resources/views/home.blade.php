@@ -286,6 +286,7 @@
                           </div>
                         </div>
                       </div>
+
                       <div class="form-buttons">
                         <button class="botao-vermelho botao btnResetCalcAgua" type="reset">
                           limpar
