@@ -119,6 +119,7 @@
 
 .btnAddItem {
     background-color: transparent;
+    padding-left: 1.2rem;
 }
 
 .btnAddItem i {
@@ -163,4 +164,8 @@
 
 .deleteItem i:hover {
     color: var(--r500);
+}
+
+.formula-nutrientes.soma {
+    margin-bottom: 1.2rem;
 }
