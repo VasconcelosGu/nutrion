@@ -76,9 +76,12 @@
     gap: 1rem;
 }
 
-.nutrientes-lista h1,
 .formula-nutrientes h1 {
     text-align: center;
+}
+
+.nutrientes-lista h1 {
+    text-align: left;
 }
 
 .formula-nutrientes {
@@ -111,6 +114,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 999px;
+    transition: all ease-in-out 0.15s;
 }
 
 .btnAddItem {
@@ -120,4 +124,43 @@
 .btnAddItem i {
     font-size: 1rem;
     text-align: center;
+}
+
+.btnAddItem div:hover {
+    background-color: var(--g500);
+}
+
+.nutrientes-total {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nutrientes-total h3 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.nutrientes-lista.soma {
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.input-quantidade {
+    position: relative;
+}
+
+.deleteItem {
+    position: absolute;
+    top: 0.25rem;
+    right: -3.5rem;
+}
+
+.deleteItem i {
+    transition: all ease-in-out 0.2s;
+}
+
+.deleteItem i:hover {
+    color: var(--r500);
 }

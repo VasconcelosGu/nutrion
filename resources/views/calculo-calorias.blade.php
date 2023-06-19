@@ -123,6 +123,9 @@
           <div class="input-quantidade">
             <h1 class="texto-grande g700">Quantidade(g):</h1>
             <input name="quantidade" class="texto-grande g700" type="text" />
+            <button class="deleteItem">
+              <div><i class="fas fa-window-close r300"></i>
+            </button>
           </div>
         </div>
         <button class="btnAddItem">
@@ -132,10 +135,43 @@
           <button class="botao-amarelo botao btnResetCalcNutrientes" type="reset">
             reiniciar
           </button>
-
           <button class="botao-verde botao btnCalcNutrientes" type="submit">
             calcular
           </button>
+        </div>
+        <div class="nutrientes-total">
+          <h3 class="h3 g300">Nutrientes totais da refeição:</h3>
+          <ul class="nutrientes-lista soma">
+            <li>
+              <div class="qtde-total-calorias">
+                <h1 class="texto-grande g700">Calorias(Kcal)</h1>
+                <div class="calc-calorias-res" id="calc-calorias-res">
+                  <p class="texto-grande"></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="qtde-total-calorias">
+                <h1 class="texto-grande g700">Carboidratos(g)</h1>
+                <div class="calc-calorias-res" id="calc-calorias-res">
+                  <p class="texto-grande"></p>
+                </div>
+            </li>
+            <li>
+              <div class="qtde-total-calorias">
+                <h1 class="texto-grande g700">Proteínas(g)</h1>
+                <div class="calc-calorias-res" id="calc-calorias-res">
+                  <p class="texto-grande"></p>
+                </div>
+            </li>
+            <li>
+              <div class="qtde-total-calorias">
+                <h1 class="texto-grande g700">Gorduras(g)</h1>
+                <div class="calc-calorias-res" id="calc-calorias-res">
+                  <p class="texto-grande"></p>
+                </div>
+            </li>
+          </ul>
   </section>
 
   <!-- <form action="/importar" method="post" enctype="multipart/form-data">
@@ -181,7 +217,7 @@
 
 
   @vite(["resources/js/menu.js",
-  "resources/js/calculo-agua.js", "resources/js/teste.js"])
+  "resources/js/calculo-nutrientes.js"])
 
 </body>
 
