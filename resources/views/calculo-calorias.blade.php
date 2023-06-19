@@ -109,7 +109,7 @@
     @csrf <!-- Adicione isso se estiver usando o Laravel para proteção contra CSRF -->
     <input type="file" name="produtos">
     <button type="submit">Enviar</button>
-</form>
+  </form>
 
 
   <footer class="footer">
