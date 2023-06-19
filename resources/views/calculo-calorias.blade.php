@@ -93,11 +93,11 @@
           </ul>
         </div>
         <div class="form-buttons">
-          <button class="botao-vermelho botao btnResetCalcAgua" type="reset">
+          <button class="botao-vermelho botao btnResetCalcNutrientes" type="reset">
             limpar
           </button>
 
-          <button class="botao-verde botao btnCalcAgua" type="submit">
+          <button class="botao-verde botao btnCalcNutrientes" type="submit">
             calcular
           </button>
         </div>
@@ -109,25 +109,30 @@
     <div class="soma-nutrientes-container">
       <h2 class="titulo h2">monte sua refeição</h2>
       <form class="calculo" id="calculo-nutrientes-form">
-        <div class="formula-nutrientes soma">
-          <div class="input-produto">
-            <h1 class="texto-grande g700">Alimento:</h1>
-            <input list="produtos" class="texto-grande g700" id="produtos-input" name="produtos-input">
-            <datalist id="produtos">
-              @foreach($products as $product)
-              <option value="{{ $product->name }}"></option>
-              @endforeach
-            </datalist>
-          </div>
-          <p class="texto-grande g700">x</p>
-          <div class="input-quantidade">
-            <h1 class="texto-grande g700">Quantidade(g):</h1>
-            <input name="quantidade" class="texto-grande g700" type="text" />
-            <button class="deleteItem">
-              <div><i class="fas fa-window-close r300"></i>
-            </button>
-          </div>
-        </div>
+        <ul class="itens-refeição" id="itens-refeicao">
+          <li class="item-refeição">
+            <div class="formula-nutrientes soma">
+              <div class="input-produto">
+                <h1 class="texto-grande g700">Alimento:</h1>
+                <input list="produtos" class="texto-grande g700" id="produtos-input" name="produtos-input">
+                <datalist id="produtos">
+                  @foreach($products as $product)
+                  <option value="{{ $product->name }}"></option>
+                  @endforeach
+                </datalist>
+              </div>
+              <p class="texto-grande g700">x</p>
+              <div class="input-quantidade">
+                <h1 class="texto-grande g700">Quantidade(g):</h1>
+                <input name="quantidade" class="texto-grande g700" type="text" />
+                <button class="deleteItem">
+                  <div><i class="fas fa-window-close r300"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+
         <button class="btnAddItem">
           <div><i class="fas fa-plus"></i></div>
         </button>
