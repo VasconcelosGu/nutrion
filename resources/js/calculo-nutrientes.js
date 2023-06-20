@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function addItem(event) {
   event.preventDefault();
   // Criar um novo item-refeicao
-  var newItem = document.createElement('li');
+  const newItem = document.createElement('li');
   newItem.className = 'item-refeição';
   // Conteúdo do novo item-refeicao
   newItem.innerHTML = `
@@ -37,12 +37,13 @@ function addItem(event) {
     </div>
   `;
   // Adicionar o novo item-refeicao à lista de itens-refeicao
-  var listaItens = document.getElementById('itens-refeicao');
+  const listaItens = document.getElementById('itens-refeicao');
   listaItens.appendChild(newItem);
+
+  const deleteButton = newItem.querySelector('.deleteItem');
+    deleteButton.addEventListener('click', function() {
+      listaItens.removeChild(newItem);
+    });
 }
 
-btnDeleteItem.addEventListener('click',(event)=>{
-  event.preventDefault();
-  Alimentoitem.remove();
-});
 
