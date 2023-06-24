@@ -20,6 +20,6 @@ class ProductController extends Controller
 
         Excel::import(new ProductImport, $request->file('produtos'), null, \Maatwebsite\Excel\Excel::XLSX);
 
-        return ('deu tudo certo');
+        return alert('Produtos importados com sucesso!');
     }
 }
