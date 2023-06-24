@@ -39,7 +39,7 @@
 
   <section class="calculo-nutrientes">
     <div class="calculo-nutrientes-container">
-      <h1 class="titulo">cálculo de calorias</h1>
+      <h1 class="titulo">cálculo de nutrientes</h1>
       <p class="texto-grande g700">
         Escolha o alimento que deseja e digite a quantidade para saber os valores nutricionais do mesmo
       </p>
@@ -65,7 +65,8 @@
               <div class="qtde-total-calorias">
                 <h1 class="texto-grande g700">Calorias(Kcal)</h1>
                 <div class="calc-calorias-res" id="calc-calorias-res">
-                  <p class="texto-grande"></p>
+                  <p class="texto-grande">
+                  {{ $product->calories }}
                 </div>
               </div>
             </li>
