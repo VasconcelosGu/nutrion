@@ -58,7 +58,7 @@
                     <p class="texto-grande g700">x</p>
                     <div class="input-quantidade">
                         <h1 class="texto-grande g700">Quantidade(g):</h1>
-                        <input name="quantidade" class="texto-grande g700 quantidade" type="text" />
+                        <input name="quantidade" class="texto-grande g700" type="text" />
                     </div>
                     <p class="texto-grande g700">=</p>
                     <ul class="nutrientes-lista">
@@ -109,7 +109,7 @@
     <section class="montar-refeicao">
         <div class="soma-nutrientes-container">
             <h2 class="titulo h2">monte sua refeição</h2>
-            <form class="calculo" id="calculo-nutrientes-form">
+            <form class="calculo" id="calculo-nutrientes-form-soma">
                 <ul class="itens-refeição" id="itens-refeicao">
                     <li class="item-refeição">
                         <div class="formula-nutrientes soma">
@@ -119,7 +119,7 @@
                                     name="produtosInput">
                                 <datalist id="produtos">
                                     @foreach ($products as $product)
-                                        <option value="{{ $product->name }}"></option>
+                                        <option value="{{ $product->id }}">{{ $product->name }}</option>
                                     @endforeach
                                 </datalist>
                             </div>
@@ -139,7 +139,7 @@
                     <div><i class="fas fa-plus"></i></div>
                 </button>
                 <div class="form-buttons">
-                    <button class="botao-amarelo botao btnResetCalcNutrientes" type="reset">
+                    <button class="botao-amarelo botao btnResetCalcRefeicao" type="reset">
                         reiniciar
                     </button>
                     <button class="botao-verde botao btnCalcNutrientes" type="submit">
@@ -152,7 +152,7 @@
                         <li>
                             <div class="qtde-total-calorias">
                                 <h1 class="texto-grande g700">Calorias(Kcal)</h1>
-                                <div class="calc-calorias-res" id="calc-calorias-res">
+                                <div class="calc-calorias-res" id="calc-calorias-res-soma">
                                     <p class="texto-grande"></p>
                                 </div>
                             </div>
@@ -160,21 +160,21 @@
                         <li>
                             <div class="qtde-total-calorias">
                                 <h1 class="texto-grande g700">Carboidratos(g)</h1>
-                                <div class="calc-calorias-res" id="calc-calorias-res">
+                                <div class="calc-calorias-res" id="calc-carbs-res-soma">
                                     <p class="texto-grande"></p>
                                 </div>
                         </li>
                         <li>
                             <div class="qtde-total-calorias">
                                 <h1 class="texto-grande g700">Proteínas(g)</h1>
-                                <div class="calc-calorias-res" id="calc-calorias-res">
+                                <div class="calc-calorias-res" id="calc-proteinas-res-soma">
                                     <p class="texto-grande"></p>
                                 </div>
                         </li>
                         <li>
                             <div class="qtde-total-calorias">
                                 <h1 class="texto-grande g700">Gorduras(g)</h1>
-                                <div class="calc-calorias-res" id="calc-calorias-res">
+                                <div class="calc-calorias-res" id="calc-gorduras-res-soma">
                                     <p class="texto-grande"></p>
                                 </div>
                         </li>
