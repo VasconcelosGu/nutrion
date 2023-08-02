@@ -99,7 +99,7 @@
               <p class="texto-grande g700">
                 alimento * quantidade (g) = nutrientes totais (calorias, carboidratos, proteínas e gorduras)
               </p>
-              <a href="{{route('calculo-calorias')}}" class="botao botao-verde"> fazer cálculo </a>
+              <a href="{{route('calculo-nutrientes')}}" class="botao botao-verde"> fazer cálculo </a>
             </div>
           </div>
         </div>

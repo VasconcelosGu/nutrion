@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/calculo-calorias', [ProductController::class, 'index'])->name("calculo-calorias");
+Route::get('/calculo-nutrientes', [ProductController::class, 'index'])->name("calculo-nutrientes");
 
 Route::get('/', function () {
     return view('home');

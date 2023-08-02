@@ -4,6 +4,39 @@ const Alimentoitem = document.querySelector(".item-refeição");
 const itensLista = document.querySelector(".itens-refeição");
 
 
+
+const alimentoForm = document.querySelector( "#calculo-nutrientes-form");
+const textoResultadoCalorias = document.querySelector("#calc-calorias-res p");
+const textoResultadoProteinas = document.querySelector("#calc-proteinas-res p");
+const textoResultadoCarboidratos = document.querySelector("#calc-carbs-res p");
+const textoResultadoGorduras = document.querySelector("#calc-gorduras-res p");
+
+const btnReset = document.querySelector(".btnResetCalcNutrientes")
+
+
+alimentoForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    const quantidadeAlimento =  event.target.elements.quantidade.value;
+    const alimentoSelecionado = event.target.elements["produtos-input"].value;
+    const alimento = produtos.find( product => product.id === Number(alimentoSelecionado));
+
+    textoResultadoCalorias.innerText = (alimento.calories * quantidadeAlimento).toFixed(2);
+    textoResultadoProteinas.innerText = (alimento.proteins * quantidadeAlimento).toFixed(2);
+    textoResultadoCarboidratos.innerText = (alimento.carbs * quantidadeAlimento).toFixed(2);
+    textoResultadoGorduras.innerText = (alimento.lipideos * quantidadeAlimento).toFixed(2);
+});
+
+btnReset.addEventListener('click',()=>{
+  textoResultadoCalorias.innerText = "";
+  textoResultadoProteinas.innerText = "";
+  textoResultadoCarboidratos.innerText = "";
+  textoResultadoGorduras.innerText = "";
+})
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   var btnAddItem = document.querySelector('.btnAddItem');
   btnAddItem.addEventListener('click', addItem);

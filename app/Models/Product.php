@@ -24,4 +24,24 @@ class Product extends Model
         Product::gord,
         Product::carbs,
     ];
+
+    public function getCaloriesAttribute(float $calories)
+    {
+        return $calories / 100;
+    }
+
+    public function getProteinsAttribute(float $proteins)
+    {
+        return $proteins / 100;
+    }
+
+    public function getCarbsAttribute(float $carbs)
+    {
+        return $carbs / 100;
+    }
+
+    public function getLipideosAttribute(float $lipideos)
+    {
+        return $lipideos / 100;
+    }
 }
