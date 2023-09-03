@@ -243,3 +243,14 @@ dialog .contato-lista {
         top: 10rem;
     }
 }
+
+@media (max-width: 850px) {
+    .login-container dialog {
+        max-width: 350px;
+    }
+
+    .dialog-header p {
+        margin-bottom: 12px;
+        padding-top: 2rem;
+    }
+}
