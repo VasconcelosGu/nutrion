@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/calculo-nutrientes', [ProductController::class, 'index'])->name("calculo-nutrientes");
 
-Route::get('/', function () {
-    return view('home');
-})->name("home");
+// Route::get('/', function () {
+//     return view('home');
+// })->name("home");
 
 Route::get('/contato', function () {
     return view('contato');
@@ -43,3 +45,21 @@ Route::get('/calculo-agua', function () {
 // Route::get('/calculo-calorias', [ProductController::class, 'calculo-calorias'])->name("calculo-calorias");
 
 Route::post('/importar', [ProductController::class, 'importarProdutos']);
+
+Route::get('/', function () {
+    return view('home', [
+        'user' => Auth::user()
+    ]);
+})->middleware('auth:sanctum')
+    ->name('home');
+
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::post('/login', [AuthController::class, 'login'])
+    ->name('login');
+
+Route::post('/logout', [AuthController::class, 'logout'])
+    ->middleware('auth:sanctum')
+    ->name('logout');

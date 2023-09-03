@@ -33,6 +33,11 @@
                     </li>
                 </ul>
                 <a href="{{ route('selecao-calculo') }}" class="botao botao-branco">calcular</a>
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    @method('POST')
+                    <button type="submit" id="botao-logout">Sair</button>
+                </form>
             </nav>
         </div>
     </header>
@@ -186,11 +191,7 @@
         console.log(produtos);
     </script>
 
-    <!-- <form action="/importar" method="post" enctype="multipart/form-data">
-    @csrf
-    <input type="file" name="produtos">
-    <button type="submit">Enviar</button>
-</form> -->
+
 
 
     <footer class="footer">

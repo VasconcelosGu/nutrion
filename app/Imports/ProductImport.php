@@ -19,7 +19,7 @@ class ProductImport implements ToCollection
                 continue;
 
             Product::create([
-                Product::nome => trim(preg_replace("/\d/", '', $row['0'])),
+                Product::nome => trim(preg_replace("/^[0-9]+/", '', $row['0'])),
                 Product::cal => $row['1'],
                 Product::prot => $row['2'],
                 Product::gord => $row['3'],
