@@ -57,10 +57,16 @@
     display: none;
 }
 
-.header-container .botao-vermelho {
-    font-weight: 500;
+.header-container .botao-sair {
+    font-weight: 600;
     padding: 0.5rem 1.5rem;
     font-size: 0.8rem;
+    background-color: var(--w);
+    color: var(--r300);
+}
+
+.botao-sair:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 1200px) {

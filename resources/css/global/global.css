@@ -72,18 +72,21 @@ dialog::backdrop {
     padding: 0.75rem 2rem;
     border-radius: 2rem;
     transition: all ease-in-out 0.15s;
+    font-weight: 500;
 }
 
 .botao-branco {
     color: var(--g500);
     background-color: var(--w);
     border-radius: 1rem;
+    font-weight: 600;
 }
 
 .botao-verde {
     color: var(--w);
     background-color: var(--g300);
     border-radius: 0.5rem;
+    font-weight: 600;
 }
 
 .botao-verde:hover {
@@ -97,6 +100,7 @@ dialog::backdrop {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 600;
 }
 
 .botao-amarelo i {
@@ -111,6 +115,7 @@ dialog::backdrop {
     color: var(--w);
     background-color: var(--r300);
     border-radius: 0.5rem;
+    font-weight: 600;
 }
 
 .botao-vermelho:hover {
@@ -134,6 +139,22 @@ dialog::backdrop {
 }
 
 .buttonClose:hover {
+    background-color: var(--r500);
+}
+
+.buttonCloseLogin {
+    background-color: var(--r300);
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0;
+    transition: all ease-in-out 0.175s;
+}
+
+.buttonCloseLogin i {
+    font-size: 1.125rem;
+}
+
+.buttonCloseLogin:hover {
     background-color: var(--r500);
 }
 

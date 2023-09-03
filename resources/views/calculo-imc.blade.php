@@ -19,7 +19,7 @@
 </head>
 
 <body>
-     <header class="header">
+    <header class="header">
         <div class="header-container">
             <a href="{{ route('home') }}"><img src="./img/logo_verde.png" alt="logo-nutrion" /></a>
             <button class="toggle-menu"><i class="far fa-bars"></i></button>
@@ -36,7 +36,7 @@
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     @method('POST')
-                    <button type="submit" class="botao botao-vermelho">Sair</button>
+                    <button type="submit" class="botao botao-sair">Sair</button>
                 </form>
             </nav>
         </div>

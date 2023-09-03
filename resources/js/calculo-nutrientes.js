@@ -3,7 +3,6 @@ const btnDeleteItem = document.querySelector(".deleteItem");
 const Alimentoitem = document.querySelector(".item-refeição");
 const itensLista = document.querySelector(".itens-refeição");
 
-
 //consulta alimento
 const alimentoForm = document.querySelector( "#calculo-nutrientes-form");
 const textoResultadoCalorias = document.querySelector("#calc-calorias-res p");
@@ -20,24 +19,41 @@ const textoResultadoProteinasSoma = document.querySelector("#calc-proteinas-res-
 const textoResultadoCarboidratosSoma = document.querySelector("#calc-carbs-res-soma p");
 const textoResultadoGordurasSoma = document.querySelector("#calc-gorduras-res-soma p");
 
+const listaItens = document.getElementById('itens-refeicao');
+
 const btnResetRefeicao = document.querySelector(".btnResetCalcRefeicao");
-
-
 refeicaoForm.addEventListener('submit', function(event){
   event.preventDefault();
-  const quantidadeAlimento =  event.target.elements.quantidade.value;
-  const alimentoSelecionado = event.target.elements["produtos-input"].value;
-  const alimento = produtos.find( product => product.id === Number(alimentoSelecionado));
-  calcularNutrientes();
 
-  function calcularNutrientes(){
-    textoResultadoCaloriasSoma.innerText = (alimento.calories * quantidadeAlimento).toFixed(1);
-    textoResultadoProteinasSoma.innerText = (alimento.proteins * quantidadeAlimento).toFixed(1);
-    textoResultadoCarboidratosSoma.innerText = (alimento.carbs * quantidadeAlimento).toFixed(1);
-    textoResultadoGordurasSoma.innerText = (alimento.lipideos * quantidadeAlimento).toFixed(1);
+  let somas = {
+    caloria: 0,
+    proteina: 0,
+    carboidrato: 0,
+    gordura: 0
   }
 
-  //precisa fazerr o foreach para essa função
+  const itens = listaItens.querySelectorAll('.item-refeição')
+
+  itens.forEach(item => {
+    const quantidadeAlimento =  item.querySelector('[name="quantidade"]').value;
+    const alimentoSelecionado = item.querySelector('[name="produtosInput"]').value;
+    const alimento = produtos.find(product => product.id === Number(alimentoSelecionado));
+    calcularNutrientes();
+  
+    function calcularNutrientes(){
+      somas.caloria += (alimento.calories * quantidadeAlimento);
+      somas.proteina += (alimento.proteins * quantidadeAlimento);
+      somas.carboidrato += (alimento.carbs * quantidadeAlimento);
+      somas.gordura += (alimento.lipideos * quantidadeAlimento);
+    }
+
+  })
+
+  textoResultadoCaloriasSoma.innerText = (somas.caloria).toFixed(1);
+  textoResultadoProteinasSoma.innerText = (somas.proteina).toFixed(1);
+  textoResultadoCarboidratosSoma.innerText = (somas.carboidrato).toFixed(1);
+  textoResultadoGordurasSoma.innerText = (somas.gordura).toFixed(1);
+
 });
 
 
@@ -108,7 +124,6 @@ function addItem(event) {
   </div>
   `;
   // Adicionar o novo item-refeicao à lista de itens-refeicao
-  const listaItens = document.getElementById('itens-refeicao');
   listaItens.appendChild(newItem);
 
   const deleteButton = newItem.querySelector('.deleteItem');
